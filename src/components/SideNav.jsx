@@ -1,6 +1,8 @@
 import React from "react";
 import Portal from "./Portal";
 
+import closeIcon from "../../public/icons/icon-close.svg";
+
 const SideNav = ({ toggleNav, isNavOpen }) => {
   if (!isNavOpen) return null;
   return (
@@ -21,7 +23,7 @@ const SideNav = ({ toggleNav, isNavOpen }) => {
             }}
             className="mb-12"
           >
-            <img src="./src/assets/icons/icon-close.svg" alt="Exit menu icon" />
+            <img src={closeIcon} alt="Exit menu icon" />
           </button>
           <ul className="space-y-4">
             <li>Collections</li>

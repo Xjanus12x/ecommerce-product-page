@@ -85,6 +85,7 @@ function App() {
 
                   const items = [...cart, order];
                   setCart(items);
+                  localStorage.setItem("cart", JSON.stringify(items));
                   setAddToCartCount(0);
                 }}
               >

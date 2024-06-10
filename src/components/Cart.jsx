@@ -1,11 +1,12 @@
 import React from "react";
 import Portal from "./Portal";
 
+import thumbnail1 from "../../public/images/image-product-1-thumbnail.jpg";
+import deleteIcon from "../../public/icons/icon-delete.svg";
+
 const Cart = ({ isCartOpen, toggleCart, cart, setCart }) => {
   if (!isCartOpen) return null;
-
   const numberOfItemsInCart = cart.length;
-
   return (
     <Portal>
       <div
@@ -33,8 +34,8 @@ const Cart = ({ isCartOpen, toggleCart, cart, setCart }) => {
                     >
                       <img
                         className="rounded-md size-14"
-                        src="./src/assets/images/image-product-1-thumbnail.jpg"
-                        alt=""
+                        src={thumbnail1}
+                        alt="Product thumbnail"
                       />
                       <div className="text-neutral-dark-grayish-blue">
                         <p>Fall Limited Edition Sneakers</p>
@@ -51,14 +52,19 @@ const Cart = ({ isCartOpen, toggleCart, cart, setCart }) => {
                       </div>
                       <button
                         onClick={() => {
-                          setCart(
-                            cart.filter((_, cartIndex) => i !== cartIndex)
+                          const filterCart = cart.filter(
+                            (_, cartIndex) => i !== cartIndex
+                          );
+                          setCart(filterCart);
+                          localStorage.setItem(
+                            "cart",
+                            JSON.stringify(filterCart)
                           );
                         }}
                       >
                         <img
                           className="hover:brightness-0"
-                          src="./src/assets/icons/icon-delete.svg"
+                          src={deleteIcon}
                           alt="Remove order icon"
                         />
                       </button>

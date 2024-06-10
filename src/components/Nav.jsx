@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import SideNav from "./SideNav";
 import Cart from "./Cart";
 import NavContext from "../assets/Context/NavContext";
@@ -13,6 +13,12 @@ const Nav = () => {
   const { isCartOpen, setIsCartOpen, isNavOpen, setIsNavOpen } =
     useContext(NavContext);
   const { cart, setCart } = useContext(CartContext);
+  
+  useEffect(() => {
+    const storedDataForCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedDataForCart) setCart(storedDataForCart);
+  }, []);
+
   return (
     <>
       <nav className="flex justify-between px-6 py-4 mx-auto sm:border-b sm:py-5 md:py-10 sm:container">
