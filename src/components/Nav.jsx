@@ -4,8 +4,10 @@ import Cart from "./Cart";
 import NavContext from "../assets/Context/NavContext";
 import CartContext from "../assets/Context/CartContext";
 
+import logo from "../../public/logo.svg";
 import iconMenu from "../../public/icons/icon-menu.svg";
-
+import iconCart from "../../public/icons/icon-cart.svg";
+import avatar from "../../public/images/image-avatar.png";
 
 const Nav = () => {
   const { isCartOpen, setIsCartOpen, isNavOpen, setIsNavOpen } =
@@ -21,7 +23,7 @@ const Nav = () => {
           >
             <img src={iconMenu} alt="Hamburger menu" />
           </button>
-          <img src="../../public/logo.svg" alt="Logo" />
+          <img src={logo} alt="Logo" />
           <ul className="hidden font-semibold md:gap-8 lg:flex text-neutral-grayish-blue">
             <li className="relative cursor-pointer hover:before:bg-primary-orange hover:text-black hover:before:absolute hover:before:top-[4.5rem] hover:before:h-1 hover:before:inset-0">
               Collections
@@ -47,7 +49,7 @@ const Nav = () => {
           >
             <img
               className={`${isCartOpen ? "brightness-0" : ""}`}
-              src="../../public/icons/icon-cart.svg"
+              src={iconCart}
               alt="Cart icon"
             />
             {cart.length > 0 && (
@@ -60,7 +62,7 @@ const Nav = () => {
           </button>
           <img
             className="rounded-full cursor-pointer size-6 md:size-9 lg:size-12 hover:border-2 hover:border-primary-orange"
-            src="../../public/images/image-avatar.png"
+            src={avatar}
             alt="User Avatar"
           />
         </div>
