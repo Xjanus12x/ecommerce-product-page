@@ -2,22 +2,28 @@ import { useState } from "react";
 import ProductImageSlider from "./ProductImageSlider";
 import ProductImageThumbnails from "./ProductImageThumbnails";
 import Portal from "./Portal";
+
+import imageProduct1 from "../../public/images/image-product-1.jpg";
+import imageProduct2 from "../../public/images/image-product-2.jpg";
+import imageProduct3 from "../../public/images/image-product-3.jpg";
+import imageProduct4 from "../../public/images/image-product-4.jpg";
+
+import thumnail1 from "../../public/images/image-product-1-thumbnail.jpg";
+import thumnail2 from "../../public/images/image-product-2-thumbnail.jpg";
+import thumnail3 from "../../public/images/image-product-3-thumbnail.jpg";
+import thumnail4 from "../../public/images/image-product-4-thumbnail.jpg";
+
 const ProductPreview = () => {
   let [activeIndex, setActiveIndex] = useState(0);
   let [isDesktopPreview, setIsDesktopPreview] = useState(false);
 
   const PRODUCT_PREVIEW = [
-    "../../public/images/image-product-1.jpg",
-    "../../public/images/image-product-2.jpg",
-    "../../public/images/image-product-3.jpg",
-    "../../public/images/image-product-4.jpg",
+    imageProduct1,
+    imageProduct2,
+    imageProduct3,
+    imageProduct4,
   ];
-  const PRODUCT_THUMBNAILS = [
-    "../../public/images/image-product-1-thumbnail.jpg",
-    "../../public/images/image-product-2-thumbnail.jpg",
-    "../../public/images/image-product-3-thumbnail.jpg",
-    "../../public/images/image-product-4-thumbnail.jpg",
-  ];
+  const PRODUCT_THUMBNAILS = [thumnail1, thumnail2, thumnail3, thumnail4];
   return (
     <section>
       <div className="sm:space-y-9 sm:rounded-3xl lg:px-10">

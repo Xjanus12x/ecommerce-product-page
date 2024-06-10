@@ -4,6 +4,9 @@ import Cart from "./Cart";
 import NavContext from "../assets/Context/NavContext";
 import CartContext from "../assets/Context/CartContext";
 
+import iconMenu from "../../public/icons/icon-menu.svg";
+
+
 const Nav = () => {
   const { isCartOpen, setIsCartOpen, isNavOpen, setIsNavOpen } =
     useContext(NavContext);
@@ -16,7 +19,7 @@ const Nav = () => {
             className="lg:hidden"
             onClick={() => setIsNavOpen(!isNavOpen)}
           >
-            <img src="./src/assets/icons/icon-menu.svg" alt="Hamburger menu" />
+            <img src={iconMenu} alt="Hamburger menu" />
           </button>
           <img src="../../public/logo.svg" alt="Logo" />
           <ul className="hidden font-semibold md:gap-8 lg:flex text-neutral-grayish-blue">
