@@ -5,6 +5,10 @@ import ProductPreview from "./components/ProductPreview";
 import CartContext from "./assets/Context/CartContext";
 import { NavContextProvider } from "./assets/Context/NavContext";
 
+import plusIcon from "../public/icons/icon-plus.svg";
+import minusIcon from "../public/icons/icon-minus.svg";
+import cartIcon from "../public/icons/icon-cart.svg";
+
 function App() {
   let { addToCartCount, setAddToCartCount, cart, setCart } =
     useContext(CartContext);
@@ -16,7 +20,7 @@ function App() {
       </NavContextProvider>
       <main>
         <div className="grid gap-4 lg:container lg:mx-auto sm:gap-8 sm:py-4 sm:pb-16 lg:grid-cols-2 lg:px-24 lg:py-24 lg:gap-20 lg:items-center">
-          <ProductPreview/>
+          <ProductPreview />
           <section className="p-6 space-y-5 lg:px-10 md:container">
             <section className="space-y-2 sm:space-y-4">
               <h1 className="text-xs font-bold tracking-widest uppercase text-neutral-dark-grayish-blue sm:text-sm">
@@ -55,10 +59,7 @@ function App() {
                       setAddToCartCount(--addToCartCount);
                   }}
                 >
-                  <img
-                    src="../public/icons/icon-minus.svg"
-                    alt="Decrease button"
-                  />
+                  <img src={minusIcon} alt="Decrease button" />
                 </button>
 
                 <span>{addToCartCount}</span>
@@ -68,10 +69,7 @@ function App() {
                     setAddToCartCount(++addToCartCount);
                   }}
                 >
-                  <img
-                    src="../public/icons/icon-plus.svg"
-                    alt="Increment button"
-                  />
+                  <img src={plusIcon} alt="Increment button" />
                 </button>
               </div>
 
@@ -92,7 +90,7 @@ function App() {
               >
                 <img
                   className="brightness-0 size-4"
-                  src="../public/icons/icon-cart.svg"
+                  src={cartIcon}
                   alt="Cart icon"
                 />
                 <p>Add to cart</p>
