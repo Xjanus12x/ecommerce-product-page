@@ -1,0 +1,22 @@
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 300ms forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+.slideIn {
+  animation: slideIn 300ms forwards;
+}
+
