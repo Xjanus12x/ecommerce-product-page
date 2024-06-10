@@ -7,16 +7,16 @@ const ProductPreview = () => {
   let [isDesktopPreview, setIsDesktopPreview] = useState(false);
 
   const PRODUCT_PREVIEW = [
-    "./src/assets/images/image-product-1.jpg",
-    "./src/assets/images/image-product-2.jpg",
-    "./src/assets/images/image-product-3.jpg",
-    "./src/assets/images/image-product-4.jpg",
+    "../../public/images/image-product-1.jpg",
+    "../../public/images/image-product-2.jpg",
+    "../../public/images/image-product-3.jpg",
+    "../../public/images/image-product-4.jpg",
   ];
   const PRODUCT_THUMBNAILS = [
-    "./src/assets/images/image-product-1-thumbnail.jpg",
-    "./src/assets/images/image-product-2-thumbnail.jpg",
-    "./src/assets/images/image-product-3-thumbnail.jpg",
-    "./src/assets/images/image-product-4-thumbnail.jpg",
+    "../../public/images/image-product-1-thumbnail.jpg",
+    "../../public/images/image-product-2-thumbnail.jpg",
+    "../../public/images/image-product-3-thumbnail.jpg",
+    "../../public/images/image-product-4-thumbnail.jpg",
   ];
   return (
     <section>

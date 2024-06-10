@@ -56,7 +56,7 @@ function App() {
                   }}
                 >
                   <img
-                    src="./src/assets/icons/icon-minus.svg"
+                    src="../public/icons/icon-minus.svg"
                     alt="Decrease button"
                   />
                 </button>
@@ -69,7 +69,7 @@ function App() {
                   }}
                 >
                   <img
-                    src="./src/assets/icons/icon-plus.svg"
+                    src="../public/icons/icon-plus.svg"
                     alt="Increment button"
                   />
                 </button>
@@ -92,7 +92,7 @@ function App() {
               >
                 <img
                   className="brightness-0 size-4"
-                  src="./src/assets/icons/icon-cart.svg"
+                  src="../public/icons/icon-cart.svg"
                   alt="Cart icon"
                 />
                 <p>Add to cart</p>
